@@ -1,0 +1,11 @@
+python manager.py runserver // run server
+python manager.py start     //create catalog which include model, views...
+
+migrations 一個migration文件夾，用來存放 “migrations” ——當你修改你的數據模型時，這個文件會自動升級你的資料庫。
+__init__.py —一個空文件，Django/Python 會將這個文件作為Python 套件包並允許你在項目的其他部分使用它。
+
+主控 是setting.py and urls.py
+
+
+1.創建catalog
+2.註冊catalog 應用, 改變time zone
