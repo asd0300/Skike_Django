@@ -1,23 +1,23 @@
 <template>
   <div id="wrapper">
     <nav class="navbar is-dark">
-      <div class="narbar-brand">
+      <div class="navbar-brand">
         <router-link to="/" class="nav-item"><strong>Skike</strong></router-link> |
         <router-link to="/">Home</router-link> |
         <router-link to="/about">About</router-link>
-        <a class="narbar-burger" aria-label="menu" aria-expanded='false' data-targer="nar-menu">
+        <a class="navbar-burger" aria-label="menu" aria-expanded='false' data-targer="nav-menu" @click="showMobileMenu = !showMobileMenu">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
       
-      <div class="navbar-menu" id="navbar-menu">
+      <div class="navbar-menu" id="navbar-menu" :class="{'is-active': showMobileMenu}">
         <div class="navbar-end">
           <router-link to="/summer" class="navbar-item">Summer</router-link>
           <router-link to="/winter" class="navbar-item">Winter</router-link>
 
-          <div class="narbar-item">
+          <div class="navbav-item">
             <div class="buttons">
               <router-link to="log-in" class="button is-light">Log in</router-link>
               <router-link to="cart" class="button is-success">
@@ -37,26 +37,15 @@
     </footer>
   </div>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+export default{
+  data(){
+    return{
+      showMobileMenu: false,
     }
   }
 }
+</script>
+<style lang="scss">
+@import '../node_modules/bulma';
 </style>
