@@ -1,0 +1,3 @@
+source ../test/bin/activate
+pip freeze > requirements.txt
+source ../test/bin/activate
